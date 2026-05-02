@@ -91,7 +91,10 @@ export function Valores() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
-            Valores que guiam nossa <span className="text-[#A719FA]">construção</span>
+            Valores que guiam nossa{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6DFBCB] to-[#6A3F91]">
+              construção
+            </span>
           </h2>
           <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-white/65 leading-relaxed">
             Pessoas com conhecimentos diferentes e complementares, unidas por um propósito: construir soluções que gerem valor real.

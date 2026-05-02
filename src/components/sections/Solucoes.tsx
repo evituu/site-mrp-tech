@@ -105,38 +105,39 @@ export function Solucoes() {
           {solucoes.map((s, i) => (
             <div
               key={s.number}
-              className="group relative overflow-hidden p-8 bg-white/55 backdrop-blur-xl border border-white/60 shadow-[0_8px_40px_rgba(16,16,20,0.08)] hover:bg-white/70 hover:border-[#6DFBCB]/40 hover:shadow-[0_16px_60px_rgba(106,63,145,0.14)] transition-all duration-800 flex flex-col"
+              className="h-full transition-[opacity,transform] duration-700 ease-out"
               style={{
                 opacity: gridVisible ? 1 : 0,
                 transform: gridVisible ? "translateY(0)" : "translateY(28px)",
                 transitionDelay: gridVisible ? `${i * 500}ms` : "0ms",
-                transitionProperty: "opacity, transform, box-shadow, background-color, border-color",
               }}
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="absolute -top-16 -right-16 w-40 h-40 bg-[#6DFBCB]/20 blur-3xl" />
-                <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-[#A719FA]/15 blur-3xl" />
-              </div>
+              <div className="group relative overflow-hidden h-full p-8 bg-white/55 backdrop-blur-xl border border-white/60 shadow-[0_8px_40px_rgba(16,16,20,0.08)] hover:bg-white/70 hover:border-[#6DFBCB]/40 hover:shadow-[0_16px_60px_rgba(106,63,145,0.14)] hover:-translate-y-1.5 transition-all duration-500 will-change-transform flex flex-col">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute -top-16 -right-16 w-40 h-40 bg-[#6DFBCB]/20 blur-3xl" />
+                  <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-[#A719FA]/15 blur-3xl" />
+                </div>
 
-              <div className="relative z-10 flex flex-col flex-1">
-                <span className="text-[#A719FA]/50 text-xs font-mono mb-4">
-                  {s.number}
-                </span>
-                <h3 className="text-[#101014] font-semibold text-lg mb-3 group-hover:text-[#6A3F91] transition-colors">
-                  {s.title}
-                </h3>
-                <p className="text-[#4B5563] text-sm leading-relaxed flex-1">
-                  {s.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-5">
-                  {s.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs text-[#6A3F91]/80 border border-[#6A3F91]/20 bg-white/40 backdrop-blur-md px-2 py-0.5"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div className="relative z-10 flex flex-col flex-1">
+                  <span className="text-[#A719FA]/50 text-xs font-mono mb-4">
+                    {s.number}
+                  </span>
+                  <h3 className="text-[#101014] font-semibold text-lg mb-3 group-hover:text-[#6A3F91] transition-colors">
+                    {s.title}
+                  </h3>
+                  <p className="text-[#4B5563] text-sm leading-relaxed flex-1">
+                    {s.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-5">
+                    {s.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs text-[#6A3F91]/80 border border-[#6A3F91]/20 bg-white/40 backdrop-blur-md px-2 py-0.5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

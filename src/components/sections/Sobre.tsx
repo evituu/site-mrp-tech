@@ -15,7 +15,11 @@ export function Sobre() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
-            Revelamos a quarta <span className="text-[#A719FA]">dimensão</span> do seu negócio
+            Revelamos a quarta{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6DFBCB] to-[#6A3F91]">
+              dimensão
+            </span>{" "}
+            do seu negócio
           </h2>
           <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-white/65 leading-relaxed">
             Tecnologia e dados como uma lente para enxergar além do óbvio, transformando processos invisíveis em crescimento real.

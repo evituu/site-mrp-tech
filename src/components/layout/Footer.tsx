@@ -131,9 +131,14 @@ export function Footer() {
               >
                 contato@mrptech.com.br
               </a>
-              <span className="text-sm text-white/30">
-                WhatsApp em breve
-              </span>
+              <a
+                href="https://wa.me/55"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-white/50 hover:text-[#6DFBCB] transition-colors duration-200"
+              >
+                Fale pelo WhatsApp
+              </a>
             </div>
 
             <div className="mt-6 flex gap-3">
@@ -151,6 +156,22 @@ export function Footer() {
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect x="2" y="9" width="4" height="12" />
                   <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/55"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
+                className="w-10 h-10 flex items-center justify-center border border-white/10 bg-white/[0.02] text-white/40 transition-all duration-200 hover:border-[#6DFBCB]/60 hover:text-[#6DFBCB] hover:shadow-[0_0_20px_rgba(109,251,203,0.12)]"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M20.52 3.48A11.9 11.9 0 0 0 12.07 0C5.43 0 .04 5.38.04 12.02c0 2.12.55 4.2 1.6 6.03L0 24l6.1-1.6a11.93 11.93 0 0 0 5.96 1.51h.01c6.64 0 12.03-5.38 12.03-12.02 0-3.22-1.26-6.25-3.58-8.41Zm-8.45 18.47h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.62.95.97-3.52-.23-.37a9.88 9.88 0 0 1-1.52-5.27C2.25 6.6 6.62 2.23 12.07 2.23c2.66 0 5.16 1.04 7.04 2.92a9.86 9.86 0 0 1 2.92 7.04c0 5.45-4.37 9.76-9.96 9.76Zm5.76-7.88c-.31-.16-1.84-.91-2.13-1.02-.29-.1-.5-.16-.72.16-.21.31-.82 1.02-1 1.23-.18.2-.36.23-.67.08-.31-.16-1.31-.48-2.49-1.53-.92-.82-1.53-1.84-1.71-2.15-.18-.31-.02-.48.14-.64.14-.14.31-.36.46-.54.15-.18.2-.31.31-.51.1-.2.05-.38-.02-.54-.08-.16-.72-1.73-.99-2.36-.26-.62-.53-.53-.72-.54h-.62c-.2 0-.54.08-.82.38-.29.31-1.1 1.08-1.1 2.63 0 1.55 1.13 3.06 1.28 3.27.16.2 2.22 3.39 5.39 4.75.75.32 1.33.51 1.78.65.75.24 1.43.21 1.97.13.6-.09 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.6-.36Z" />
                 </svg>
               </a>
               <a

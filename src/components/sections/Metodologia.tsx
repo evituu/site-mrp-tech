@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 
 const iconBaseProps = {
   width: 22,
@@ -100,6 +103,27 @@ function getDelay(index: number) {
 }
 
 export function Metodologia() {
+  const stepsRef = useRef<HTMLDivElement>(null);
+  const [stepsVisible, setStepsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = stepsRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStepsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="metodologia"
@@ -155,7 +179,7 @@ export function Metodologia() {
           </div>
 
           {/* Cards */}
-          <div className="relative grid grid-cols-1 md:grid-cols-6 gap-10 md:gap-4">
+          <div ref={stepsRef} className="relative grid grid-cols-1 md:grid-cols-6 gap-10 md:gap-4">
             {steps.map((step, i) => {
               const delay = getDelay(i);
               const isLast = step.highlight;
@@ -164,6 +188,12 @@ export function Metodologia() {
                 <div
                   key={step.label}
                   className="flex md:flex-col items-start md:items-center gap-4 md:gap-3"
+                  style={{
+                    opacity: stepsVisible ? 1 : 0,
+                    transform: stepsVisible ? "translateY(0)" : "translateY(24px)",
+                    transition: "opacity 0.5s ease, transform 0.5s ease",
+                    transitionDelay: stepsVisible ? `${i * 490}ms` : "0ms",
+                  }}
                 >
                   {/* Ícone */}
                   <div
