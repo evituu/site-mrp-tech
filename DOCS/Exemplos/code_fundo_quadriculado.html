@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Institutional Tech - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#353535",
+                        "surface-dim": "#131313",
+                        "on-tertiary-container": "#4cdeb0",
+                        "on-primary-fixed-variant": "#5d3283",
+                        "on-secondary": "#4e0079",
+                        "secondary-fixed": "#f3daff",
+                        "surface-bright": "#393939",
+                        "primary": "#deb7ff",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#f1dbff",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1b1b1b",
+                        "outline-variant": "#4b4450",
+                        "tertiary-container": "#005f47",
+                        "on-secondary-fixed": "#2f004c",
+                        "primary-container": "#6a3f91",
+                        "on-secondary-container": "#f7e1ff",
+                        "surface-tint": "#deb7ff",
+                        "secondary-container": "#9f00f2",
+                        "on-primary-container": "#dfb8ff",
+                        "inverse-surface": "#e2e2e2",
+                        "on-surface": "#e2e2e2",
+                        "background": "#131313",
+                        "outline": "#978e9b",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-on-surface": "#303030",
+                        "tertiary-fixed": "#6dfbcb",
+                        "surface": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "inverse-primary": "#764b9d",
+                        "tertiary-fixed-dim": "#4bdeb0",
+                        "on-surface-variant": "#cec3d1",
+                        "secondary": "#e3b5ff",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#deb7ff",
+                        "secondary-fixed-dim": "#e3b5ff",
+                        "surface-container-highest": "#353535",
+                        "surface-container": "#1f1f1f",
+                        "on-primary-fixed": "#2d0050",
+                        "on-tertiary-fixed": "#002116",
+                        "on-primary": "#45186b",
+                        "tertiary": "#4bdeb0",
+                        "on-tertiary-fixed-variant": "#00513c",
+                        "on-background": "#e2e2e2",
+                        "on-tertiary": "#003829",
+                        "on-secondary-fixed-variant": "#6e00aa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "md": "16px",
+                        "xl": "48px",
+                        "xxl": "80px",
+                        "lg": "24px",
+                        "container-max": "1440px",
+                        "margin": "32px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "h1": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "body-md": ["Manrope"],
+                        "code": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "h1": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h3": ["32px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "code": ["14px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+        }
+        .glow-primary {
+            box-shadow: 0 0 15px rgba(109, 251, 203, 0.6);
+        }
+        .glow-secondary {
+            box-shadow: 0 0 50px rgba(106, 63, 145, 0.4);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card:hover {
+            backdrop-filter: blur(40px);
+            box-shadow: inset 0 0 20px rgba(167, 25, 250, 0.1);
+        }
+        .digital-line {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+            position: relative;
+        }
+        .digital-line::after {
+            content: '';
+            position: absolute;
+            top: -1.5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #6DFBCB;
+            border-radius: 1px;
+        }
+        .bg-grid {
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden selection:bg-tertiary-fixed selection:text-black">
+<!-- TopNavBar -->
+<nav class="bg-black/60 backdrop-blur-[24px] fixed top-0 w-full z-50 flex justify-between items-center px-8 h-20 max-w-container-max mx-auto border-b border-white/10 shadow-[0_4px_30px_rgba(106,63,145,0.1)]">
+<div class="text-2xl font-bold text-white tracking-tighter font-h3 text-h3">
+            TECH_INST
+        </div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight">
+<a class="text-[#6DFBCB] font-bold border-b-2 border-[#6DFBCB] pb-1" href="#">Home</a>
+<a class="text-white/70 hover:text-[#6DFBCB] transition-all duration-300" href="#solucoes">Soluções</a>
+<a class="text-white/70 hover:text-[#6DFBCB] transition-all duration-300" href="#sobre">Sobre</a>
+<a class="text-white/70 hover:text-[#6DFBCB] transition-all duration-300" href="#cases">Cases</a>
+<a class="text-white/70 hover:text-[#6DFBCB] transition-all duration-300" href="#contato">Contato</a>
+</div>
+<div class="hidden md:flex">
+<button class="bg-tertiary-fixed text-black font-label-caps text-label-caps px-md py-sm rounded hover:glow-primary transition-all active:scale-95">
+                Fale com um especialista
+            </button>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-xxl min-h-screen flex items-center bg-grid overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-primary-container/20 to-transparent pointer-events-none"></div>
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container/30 rounded-full blur-[100px] pointer-events-none glow-secondary"></div>
+<div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-tertiary-fixed/20 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin w-full relative z-10">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-sm border border-tertiary-fixed/30 bg-tertiary-fixed/10 px-sm py-xs rounded mb-md">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-tertiary-fixed">SISTEMAS DE ALTA PERFORMANCE</span>
+</div>
+<h1 class="font-h1 text-h1 text-white mb-lg">
+                    Soluções digitais <span class="text-transparent bg-clip-text bg-gradient-to-r from-tertiary-fixed to-primary">inteligentes</span> para empresas que querem escalar.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-2xl">
+                    Transformamos dados em inteligência, infraestrutura em escalabilidade e processos em automação. Nossa expertise em IA, Cloud e Engenharia de Software acelera o futuro do seu negócio.
+                </p>
+<div class="flex flex-col sm:flex-row gap-md">
+<button class="bg-tertiary-fixed text-black font-label-caps text-label-caps px-lg py-md rounded hover:glow-primary transition-all">
+                        CONHEÇA NOSSAS SOLUÇÕES
+                    </button>
+<button class="border border-secondary-container text-white bg-transparent font-label-caps text-label-caps px-lg py-md rounded hover:bg-secondary-container/15 transition-all">
+                        ENTRAR EM CONTATO
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<div class="max-w-container-max mx-auto px-margin py-xxl w-full">
+<div class="digital-line"></div>
+</div>
+<!-- Soluções Section -->
+<section class="py-xxl max-w-container-max mx-auto px-margin relative" id="solucoes">
+<div class="mb-xl text-center">
+<h2 class="font-h2 text-h2 text-white mb-sm">Soluções <span class="text-tertiary-fixed">Estratégicas</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Arquiteturas robustas para desafios complexos.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="glass-card p-lg rounded-xl flex flex-col gap-md transition-all group relative overflow-hidden">
+<div class="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-tertiary-fixed/20 to-transparent opacity-50"></div>
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl group-hover:scale-110 transition-transform z-10" style="font-variation-settings: 'FILL' 1;">cloud</span>
+<h3 class="font-h3 text-h3 text-white z-10">Cloud &amp; DevOps</h3>
+<p class="font-body-md text-body-md text-on-surface-variant z-10">Infraestrutura escalável e pipelines automatizados para entregas contínuas e seguras.</p>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-lg rounded-xl flex flex-col gap-md transition-all group relative overflow-hidden">
+<div class="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary-container/40 to-transparent opacity-50"></div>
+<span class="material-symbols-outlined text-secondary-fixed text-4xl group-hover:scale-110 transition-transform z-10" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h3 class="font-h3 text-h3 text-white z-10">Inteligência Artificial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant z-10">Modelos preditivos e automação cognitiva para otimizar decisões de negócio.</p>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-lg rounded-xl flex flex-col gap-md transition-all group relative overflow-hidden">
+<div class="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-tertiary-fixed/20 to-transparent opacity-50"></div>
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl group-hover:scale-110 transition-transform z-10" style="font-variation-settings: 'FILL' 1;">database</span>
+<h3 class="font-h3 text-h3 text-white z-10">Engenharia de Dados</h3>
+<p class="font-body-md text-body-md text-on-surface-variant z-10">Pipelines de dados estruturados para analytics em tempo real e business intelligence.</p>
+</div>
+<!-- Card 4 -->
+<div class="glass-card p-lg rounded-xl flex flex-col gap-md transition-all group relative overflow-hidden lg:col-span-2">
+<div class="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary-container/40 to-transparent opacity-50"></div>
+<span class="material-symbols-outlined text-secondary-fixed text-4xl group-hover:scale-110 transition-transform z-10" style="font-variation-settings: 'FILL' 1;">code</span>
+<h3 class="font-h3 text-h3 text-white z-10">Desenvolvimento de Software Customizado</h3>
+<p class="font-body-md text-body-md text-on-surface-variant z-10 max-w-xl">Aplicações web e mobile construídas com arquiteturas modernas, focadas em performance extrema e experiência do usuário superior. Do MVP ao enterprise.</p>
+</div>
+<!-- Card 5 -->
+<div class="glass-card p-lg rounded-xl flex flex-col gap-md transition-all group relative overflow-hidden">
+<div class="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-tertiary-fixed/20 to-transparent opacity-50"></div>
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl group-hover:scale-110 transition-transform z-10" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<h3 class="font-h3 text-h3 text-white z-10">Automação RPA</h3>
+<p class="font-body-md text-body-md text-on-surface-variant z-10">Redução de trabalho manual através de workflows automatizados de ponta a ponta.</p>
+</div>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="py-xxl max-w-container-max mx-auto px-margin relative" id="contato">
+<div class="mb-xl text-center">
+<h2 class="font-h2 text-h2 text-white mb-sm">Entre em <span class="text-tertiary-fixed">Contato</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Vamos construir o futuro da sua empresa juntos.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<!-- Contact Form -->
+<div class="glass-card p-lg rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-container/20 to-transparent opacity-30"></div>
+<form class="flex flex-col gap-md relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant px-1">Nome</label>
+<input class="bg-surface-container-low border border-white/10 rounded-lg p-md text-white placeholder:text-white/20 focus:outline-none focus:border-tertiary-fixed transition-colors" placeholder="Seu nome completo" type="text"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant px-1">E-mail</label>
+<input class="bg-surface-container-low border border-white/10 rounded-lg p-md text-white placeholder:text-white/20 focus:outline-none focus:border-tertiary-fixed transition-colors" placeholder="seu@email.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant px-1">Assunto</label>
+<input class="bg-surface-container-low border border-white/10 rounded-lg p-md text-white placeholder:text-white/20 focus:outline-none focus:border-tertiary-fixed transition-colors" placeholder="Como podemos ajudar?" type="text"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant px-1">Mensagem</label>
+<textarea class="bg-surface-container-low border border-white/10 rounded-lg p-md text-white placeholder:text-white/20 focus:outline-none focus:border-tertiary-fixed transition-colors resize-none" placeholder="Descreva seu projeto ou desafio..." rows="4"></textarea>
+</div>
+<button class="bg-tertiary-fixed text-black font-label-caps text-label-caps px-lg py-md rounded hover:glow-primary transition-all w-full mt-md" type="submit">
+                    ENVIAR MENSAGEM
+                </button>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="flex flex-col justify-center gap-xl lg:pl-xl">
+<div class="flex flex-col gap-lg">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed/10 border border-tertiary-fixed/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary-fixed">mail</span>
+</div>
+<div>
+<h4 class="font-h3 text-body-lg font-bold text-white mb-xs">E-mail</h4>
+<p class="text-on-surface-variant">contato@techinst.com.br</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 border border-primary-container/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-fixed">call</span>
+</div>
+<div>
+<h4 class="font-h3 text-body-lg font-bold text-white mb-xs">Telefone</h4>
+<p class="text-on-surface-variant">+55 (11) 99999-9999</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed/10 border border-tertiary-fixed/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary-fixed">location_on</span>
+</div>
+<div>
+<h4 class="font-h3 text-body-lg font-bold text-white mb-xs">Endereço</h4>
+<p class="text-on-surface-variant">Av. Paulista, 1000 - Bela Vista<br/>São Paulo, SP</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-md">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant">Siga-nos</h4>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-tertiary-fixed hover:text-tertiary-fixed transition-all group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:scale-110">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary-container hover:text-secondary-fixed transition-all group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:scale-110">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-tertiary-fixed hover:text-tertiary-fixed transition-all group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:scale-110">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-xxl relative overflow-hidden mt-xl">
+<div class="absolute inset-0 bg-gradient-to-r from-[#6A3F91] to-[#A719FA] opacity-90"></div>
+<div class="absolute inset-0 bg-grid opacity-30"></div>
+<div class="max-w-4xl mx-auto px-margin relative z-10 text-center flex flex-col items-center">
+<h2 class="font-h1 text-h1 text-white mb-lg leading-tight">Pronto para transformar sua operação com tecnologia?</h2>
+<p class="font-body-lg text-body-lg text-white/80 mb-xl max-w-2xl">Agende uma consultoria técnica e descubra como nossa arquitetura pode impulsionar seus resultados no próximo trimestre.</p>
+<button class="bg-tertiary-fixed text-black font-label-caps text-label-caps px-xl py-lg rounded hover:glow-primary transition-all text-lg tracking-wider">
+                INICIAR TRANSFORMAÇÃO DIGITAL
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto border-t border-white/5 bg-[#000000] shadow-[0_-20px_50px_rgba(106,63,145,0.05)]">
+<div class="text-xl font-black text-white font-h3 text-h3">
+            TECH_INST
+        </div>
+<div class="flex gap-md font-['Space_Grotesk'] text-sm uppercase tracking-widest">
+<a class="text-white/40 hover:text-[#A719FA] transition-colors" href="#">Privacidade</a>
+<a class="text-white/40 hover:text-[#A719FA] transition-colors" href="#">Termos</a>
+<a class="text-white/40 hover:text-[#A719FA] transition-colors" href="#">Cookies</a>
+<a class="text-white/40 hover:text-[#A719FA] transition-colors" href="#">Suporte</a>
+</div>
+<div class="text-[#6A3F91] font-['Space_Grotesk'] text-sm uppercase tracking-widest opacity-100 hover:opacity-80">
+            © 2024 Institutional Tech. All rights reserved.
+        </div>
+</footer>
+</body></html>
