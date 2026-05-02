@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
 
 export function Contato() {
@@ -53,19 +52,18 @@ export function Contato() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+            Vamos revelar a quarta <span className="text-[#A719FA]">dimensão</span> do seu negócio
+          </h2>
+          <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-white/65 leading-relaxed">
+            Tem uma dor no seu negócio que a tecnologia pode resolver? Nosso primeiro passo é entender o seu cenário com profundidade.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left: copy */}
           <div>
-            <Badge className="mb-5">Entre em contato</Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-4 mb-6 leading-tight">
-              Vamos revelar a quarta dimensão{" "}
-              <span className="text-[#A719FA]">do seu negócio</span>
-            </h2>
-            <p className="text-white/50 leading-relaxed text-base mb-8">
-              Tem uma dor no seu negócio que a tecnologia pode resolver? Fale
-              com a gente. Nosso primeiro passo é entender o seu cenário com
-              profundidade — sem propor nada genérico.
-            </p>
 
             <div className="space-y-4">
               {[

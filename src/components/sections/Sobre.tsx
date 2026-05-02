@@ -1,4 +1,3 @@
-import { Badge } from "../ui/Badge";
 import { Tesseract } from "../ui/Tesseract";
 
 export function Sobre() {
@@ -14,17 +13,18 @@ export function Sobre() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+            Revelamos a quarta <span className="text-[#A719FA]">dimensão</span> do seu negócio
+          </h2>
+          <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-white/65 leading-relaxed">
+            Tecnologia e dados como uma lente para enxergar além do óbvio, transformando processos invisíveis em crescimento real.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text */}
           <div>
-            <Badge className="mb-5">Sobre nós</Badge>
-
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-4 mb-6 leading-tight">
-              Revelamos a quarta dimensão{" "}
-              <span className="text-[#A719FA]">quarta dimensão </span>
-              do seu negócio.
-            </h2>
-
             <div className="space-y-4 text-white/55 leading-relaxed text-base">
               <p>
                 A MRP Tech nasce da tecnologia que permite as

@@ -1,4 +1,3 @@
-import { Badge } from "../ui/Badge";
 
 const valores = [
   {
@@ -91,13 +90,11 @@ export function Valores() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mt-4">
-            Nossos <span className="text-[#A719FA]">valores</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+            Valores que guiam nossa <span className="text-[#A719FA]">construção</span>
           </h2>
-          <p className="mt-4 text-white/50 max-w-xl mx-auto text-base leading-relaxed">
-            A MRP Tech é formada por pessoas com conhecimentos diferentes e
-            complementares, unidas por um propósito: construir soluções que
-            gerem valor real.
+          <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-white/65 leading-relaxed">
+            Pessoas com conhecimentos diferentes e complementares, unidas por um propósito: construir soluções que gerem valor real.
           </p>
         </div>
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
 
 const solucoes = [
@@ -87,15 +86,15 @@ export function Solucoes() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16">
-          <Badge light className="mb-5">O que fazemos</Badge>
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#101014] mt-4 max-w-lg leading-tight">
-              Nossas{" "}
-              <span className="text-[#6A3F91]">soluções</span> para o seu
-              negócio
-            </h2>
-            <Button variant="dark" href="#contato" className="shrink-0">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#101014] tracking-tight leading-tight">
+            Soluções para transformar <span className="text-[#6A3F91]">operação</span> em escala
+          </h2>
+          <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-[#4B5563] leading-relaxed">
+            Da consultoria ao desenvolvimento, criamos tecnologia sob medida para resolver dores reais e gerar crescimento sustentável.
+          </p>
+          <div className="mt-8">
+            <Button variant="dark" href="#contato">
               Fale com um especialista
             </Button>
           </div>

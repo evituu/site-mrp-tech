@@ -1,4 +1,3 @@
-import { Badge } from "../ui/Badge";
 
 const iconBaseProps = {
   width: 22,
@@ -120,18 +119,12 @@ export function Metodologia() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14 sm:mb-16">
-          <Badge light className="mb-5">Metodologia</Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#101014] mt-4 mb-4 leading-tight">
-            Da Dor ao{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A719FA] to-[#6A3F91]">
-              Produto Escalonável
-            </span>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#101014] tracking-tight leading-tight">
+            Da Dor ao <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A719FA] to-[#6A3F91]">Produto Escalável</span>
           </h2>
-          <p className="text-[#4B5563] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-            Nossa metodologia transforma problemas reais em soluções digitais
-            validadas, escaláveis e prontas para gerar valor em diferentes
-            negócios.
+          <p className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-[#4B5563] leading-relaxed">
+            Nossa metodologia transforma problemas reais em soluções digitais validadas, escaláveis e prontas para gerar valor em diferentes negócios.
           </p>
         </div>
 
