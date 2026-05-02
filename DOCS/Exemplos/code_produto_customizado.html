@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Produtos - MRP Tech</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#4bdeb0",
+                        "outline-variant": "#4b4450",
+                        "on-tertiary-container": "#4cdeb0",
+                        "on-secondary-fixed": "#2f004c",
+                        "on-secondary": "#4e0079",
+                        "surface-container": "#1f1f1f",
+                        "tertiary-fixed": "#6dfbcb",
+                        "secondary": "#e3b5ff",
+                        "on-tertiary": "#003829",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#5d3283",
+                        "on-background": "#e2e2e2",
+                        "secondary-fixed-dim": "#e3b5ff",
+                        "inverse-on-surface": "#303030",
+                        "secondary-fixed": "#f3daff",
+                        "on-surface": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#6e00aa",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#f1dbff",
+                        "on-tertiary-fixed": "#002116",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed": "#2d0050",
+                        "primary": "#deb7ff",
+                        "on-tertiary-fixed-variant": "#00513c",
+                        "on-surface-variant": "#cec3d1",
+                        "on-secondary-container": "#f7e1ff",
+                        "surface-container-low": "#1b1b1b",
+                        "on-error": "#690005",
+                        "surface-variant": "#353535",
+                        "surface-tint": "#deb7ff",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#764b9d",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#393939",
+                        "on-primary": "#45186b",
+                        "inverse-surface": "#e2e2e2",
+                        "on-primary-container": "#dfb8ff",
+                        "secondary-container": "#9f00f2",
+                        "outline": "#978e9b",
+                        "tertiary-container": "#005f47",
+                        "background": "#131313",
+                        "primary-container": "#6a3f91",
+                        "primary-fixed-dim": "#deb7ff",
+                        "surface": "#131313",
+                        "surface-dim": "#131313",
+                        "tertiary": "#4bdeb0",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "margin": "32px",
+                        "gutter": "24px",
+                        "lg": "24px",
+                        "unit": "8px",
+                        "xxl": "80px",
+                        "xs": "4px",
+                        "xl": "48px",
+                        "sm": "8px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-caps": ["Space Grotesk"],
+                        "code": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h1": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "code": ["14px", { "lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "400" }],
+                        "h3": ["32px", { "lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600" }],
+                        "h2": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(106, 63, 145, 0.08);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-panel-hover:hover {
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            box-shadow: inset 0 0 20px rgba(167, 25, 250, 0.2);
+            border-color: rgba(167, 25, 250, 0.4);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(109, 251, 203, 0.5);
+        }
+        .primary-btn-glow:hover {
+            box-shadow: 0 0 15px #6DFBCB;
+        }
+        .digital-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        }
+        .digital-line-vertical {
+            width: 1px;
+            background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        }
+        .light-leak {
+            background: radial-gradient(circle at top left, rgba(167, 25, 250, 0.15) 0%, transparent 50%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative font-body-md text-on-surface">
+<!-- Background Elements -->
+<div class="fixed inset-0 z-[-1] pointer-events-none">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1a0a2a] via-black to-black opacity-80"></div>
+<!-- Abstract grid lines -->
+<div class="absolute w-full h-[1px] top-[20%] bg-white/5 shadow-[0_0_15px_rgba(106,63,145,0.5)]"></div>
+<div class="absolute w-full h-[1px] top-[60%] bg-white/5 shadow-[0_0_15px_rgba(106,63,145,0.5)]"></div>
+<div class="absolute h-full w-[1px] left-[15%] bg-white/5 shadow-[0_0_15px_rgba(106,63,145,0.5)]"></div>
+<div class="absolute h-full w-[1px] right-[15%] bg-white/5 shadow-[0_0_15px_rgba(106,63,145,0.5)]"></div>
+</div>
+<!-- TopAppBar -->
+<header class="bg-black/60 backdrop-blur-[24px] fixed top-0 w-full z-50 border-b-[0.5px] border-white/10 shadow-[0_8px_32px_rgba(106,63,145,0.2)]">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1440px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-white uppercase font-h1">MRP Tech</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-white/70 font-medium font-body-md hover:text-white hover:bg-white/5 transition-all duration-300 px-4 py-2 rounded-DEFAULT active:scale-95 transition-transform" href="#">Home</a>
+<a class="text-white/70 font-medium font-body-md hover:text-white hover:bg-white/5 transition-all duration-300 px-4 py-2 rounded-DEFAULT active:scale-95 transition-transform" href="#">Soluções</a>
+<a class="text-[#A719FA] font-bold border-b-2 border-[#A719FA] pb-1 font-body-md hover:text-white hover:bg-white/5 transition-all duration-300 px-4 py-2 rounded-DEFAULT active:scale-95 transition-transform" href="#">Produtos</a>
+<a class="text-white/70 font-medium font-body-md hover:text-white hover:bg-white/5 transition-all duration-300 px-4 py-2 rounded-DEFAULT active:scale-95 transition-transform" href="#">Contato</a>
+</nav>
+<button class="bg-tertiary-fixed text-black font-bold font-label-caps py-2 px-6 rounded-DEFAULT primary-btn-glow transition-all duration-300 uppercase tracking-widest hidden md:block">Get Started</button>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-32 pb-xxl px-gutter max-w-container-max mx-auto w-full">
+<!-- Hero Section -->
+<section class="relative min-h-[614px] flex flex-col justify-center items-center text-center mb-xxl">
+<!-- Glowing orb behind text -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
+<div class="z-10 max-w-4xl space-y-lg">
+<div class="inline-flex items-center gap-2 border border-tertiary-fixed/30 bg-tertiary-fixed/5 px-4 py-1.5 rounded-full mb-4">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span class="font-label-caps text-tertiary-fixed uppercase">Ecossistema de Soluções</span>
+</div>
+<h1 class="font-h1 text-h1 text-white text-glow leading-tight">
+                    Produtos que Transformam <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary-fixed">Dores em Ativos Tecnológicos</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Conheça o ecossistema de soluções da MRP Tech: do diagnóstico à criação de produtos escaláveis que revelam a quarta dimensão do seu negócio.
+                </p>
+</div>
+<!-- Technical Ornament -->
+<div class="w-full flex justify-center items-center mt-xl opacity-50">
+<div class="w-1/3 digital-line"></div>
+<div class="w-2 h-2 rotate-45 border border-primary mx-4"></div>
+<div class="w-1/3 digital-line"></div>
+</div>
+</section>
+<!-- Ecossistema MRP (Produtos Próprios) -->
+<section class="mb-xxl relative">
+<h2 class="font-h2 text-h2 text-white mb-xl text-center">Ecossistema MRP</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Card 1 -->
+<div class="glass-panel glass-panel-hover light-leak rounded-xl p-lg relative group overflow-hidden transition-all duration-500">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container blur-[50px] opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+<div class="mb-md">
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed mb-4 block" style="font-variation-settings: 'wght' 200;">monitoring</span>
+<h3 class="font-h3 text-h3 text-white mb-2">MRP Insight</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Dashboard de inteligência preditiva para gargalos operacionais. Visualize o invisível antes que afete sua performance.</p>
+<div class="mt-8 flex items-center gap-2 text-primary font-label-caps uppercase tracking-widest cursor-pointer group-hover:text-tertiary-fixed transition-colors">
+                        Explorar <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel glass-panel-hover light-leak rounded-xl p-lg relative group overflow-hidden transition-all duration-500 transform md:-translate-y-4">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container blur-[50px] opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+<div class="mb-md">
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed mb-4 block" style="font-variation-settings: 'wght' 200;">settings</span>
+<h3 class="font-h3 text-h3 text-white mb-2">MRP Automate</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Engine de automação de processos complexos. Reduza atrito e escale operações com precisão algorítmica.</p>
+<div class="mt-8 flex items-center gap-2 text-primary font-label-caps uppercase tracking-widest cursor-pointer group-hover:text-tertiary-fixed transition-colors">
+                        Explorar <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel glass-panel-hover light-leak rounded-xl p-lg relative group overflow-hidden transition-all duration-500">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container blur-[50px] opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+<div class="mb-md">
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed mb-4 block" style="font-variation-settings: 'wght' 200;">hub</span>
+<h3 class="font-h3 text-h3 text-white mb-2">MRP Core</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Plataforma base para gestão orientada a dados. O alicerce central para unificar sua arquitetura tecnológica.</p>
+<div class="mt-8 flex items-center gap-2 text-primary font-label-caps uppercase tracking-widest cursor-pointer group-hover:text-tertiary-fixed transition-colors">
+                        Explorar <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Desenvolvimento Customizado -->
+<section class="mb-xxl relative">
+<div class="glass-panel rounded-xl p-xl overflow-hidden relative border-l-4 border-l-tertiary-fixed">
+<!-- Decorative background image -->
+<div class="absolute inset-0 z-0 opacity-20 mix-blend-overlay" data-alt="A futuristic, abstract representation of custom software architecture in a deep space setting. Glowing geometric wireframes and precise digital lines intersect in a dark, infinite void. The color palette is dominated by absolute blacks, deep purples, and striking neon green accents. The overall mood is high-tech, visionary, and hyper-digital." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB50s9XdDkO5wUt1a5iymawvPWbCd_C7XtASlN8fPmvLAssP47uF8vJIfbt6hQb_OdYERIMZbgNWEPQj06pfdQ9QdeqUBi_u_edYDUtvP0PNzigoXwerdBPyCfXO70EkUOeY0gTJ6oZ79_96uBZPGulgSzg9K3lRejq2MLHQp7n_5zNExsHdw28seP-5ZiqA5vAZ11qhsSCXgQNFb2Oks1bBSlecVA1ZDucqnFSGk8nUB3bt-OpoNWmpVMtjxsMUia0hHv6MnEvRRL_'); background-size: cover; background-position: center;"></div>
+<div class="relative z-10 flex flex-col md:flex-row gap-xl items-center">
+<div class="flex-1">
+<div class="font-label-caps text-label-caps text-tertiary-fixed uppercase tracking-widest mb-4">Engenharia Sob Medida</div>
+<h2 class="font-h2 text-h2 text-white mb-6">Desenvolvimento Customizado</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            Sua dor é o ponto de partida para um novo produto. Desenvolvemos sistemas exclusivos que resolvem seus problemas específicos e podem se tornar o próximo grande ativo do seu setor.
+                        </p>
+<button class="bg-transparent border border-primary text-primary font-label-caps font-bold py-3 px-8 rounded-DEFAULT hover:bg-primary/15 transition-all duration-300 uppercase tracking-widest flex items-center gap-2">
+                            Falar com um Arquiteto <span class="material-symbols-outlined text-sm">terminal</span>
+</button>
+</div>
+<div class="flex-1 w-full flex justify-center">
+<!-- Abstract Tesseract/Cube representation -->
+<div class="relative w-64 h-64 perspective-1000">
+<div class="absolute inset-0 border-[0.5px] border-tertiary-fixed/40 rotate-45 transform-gpu shadow-[0_0_30px_rgba(109,251,203,0.2)]"></div>
+<div class="absolute inset-4 border-[0.5px] border-primary/60 rotate-12 transform-gpu shadow-[0_0_30px_rgba(167,25,250,0.3)]"></div>
+<div class="absolute inset-8 border-[0.5px] border-white/20 -rotate-12 transform-gpu"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white shadow-[0_0_20px_#fff]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ciclo de Produto -->
+<section class="mb-xxl">
+<div class="text-center mb-xl">
+<h2 class="font-h2 text-h2 text-white mb-4">Ciclo de Produto</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Nossa metodologia de engenharia dimensional</p>
+</div>
+<div class="relative">
+<!-- Connecting Line -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-4 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-white/20 flex items-center justify-center mb-4 group-hover:border-tertiary-fixed group-hover:shadow-[0_0_15px_rgba(109,251,203,0.3)] transition-all duration-300">
+<span class="material-symbols-outlined text-white/50 group-hover:text-tertiary-fixed">search</span>
+</div>
+<div class="font-label-caps text-label-caps text-white uppercase tracking-widest mb-2">01</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm">Diagnóstico</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-white/20 flex items-center justify-center mb-4 group-hover:border-tertiary-fixed group-hover:shadow-[0_0_15px_rgba(109,251,203,0.3)] transition-all duration-300">
+<span class="material-symbols-outlined text-white/50 group-hover:text-tertiary-fixed">account_tree</span>
+</div>
+<div class="font-label-caps text-label-caps text-white uppercase tracking-widest mb-2">02</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm">Mapeamento</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-white/20 flex items-center justify-center mb-4 group-hover:border-primary group-hover:shadow-[0_0_15px_rgba(167,25,250,0.3)] transition-all duration-300">
+<span class="material-symbols-outlined text-white/50 group-hover:text-primary">architecture</span>
+</div>
+<div class="font-label-caps text-label-caps text-white uppercase tracking-widest mb-2">03</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm">Design da Solução</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-white/20 flex items-center justify-center mb-4 group-hover:border-primary group-hover:shadow-[0_0_15px_rgba(167,25,250,0.3)] transition-all duration-300">
+<span class="material-symbols-outlined text-white/50 group-hover:text-primary">code</span>
+</div>
+<div class="font-label-caps text-label-caps text-white uppercase tracking-widest mb-2">04</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm">Desenvolvimento</div>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-white/20 flex items-center justify-center mb-4 group-hover:border-tertiary-fixed group-hover:shadow-[0_0_15px_rgba(109,251,203,0.3)] transition-all duration-300">
+<span class="material-symbols-outlined text-white/50 group-hover:text-tertiary-fixed">verified</span>
+</div>
+<div class="font-label-caps text-label-caps text-white uppercase tracking-widest mb-2">05</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm">Validação</div>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-12 h-12 rounded-full bg-surface-container border border-white/20 flex items-center justify-center mb-4 group-hover:border-tertiary-fixed group-hover:shadow-[0_0_15px_rgba(109,251,203,0.3)] transition-all duration-300">
+<span class="material-symbols-outlined text-white/50 group-hover:text-tertiary-fixed">rocket_launch</span>
+</div>
+<div class="font-label-caps text-label-caps text-white uppercase tracking-widest mb-2">06</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm">Produto Escalável</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="mb-xl">
+<div class="glass-panel rounded-xl p-xl flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/20 to-transparent pointer-events-none"></div>
+<h2 class="font-h2 text-h2 text-white mb-6 z-10 relative">Pronto para criar seu próximo produto tecnológico?</h2>
+<button class="bg-tertiary-fixed text-black font-bold font-label-caps py-4 px-8 rounded-DEFAULT primary-btn-glow transition-all duration-300 uppercase tracking-widest z-10 relative">
+                    Iniciar Projeto de Produto
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black w-full py-12 border-t-[0.5px] border-white/10 inner-glow-soft border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-[1440px] mx-auto">
+<div class="col-span-1">
+<div class="text-lg font-bold text-white font-h1 tracking-tighter uppercase mb-4">MRP Tech</div>
+<p class="font-['Space_Grotesk'] text-sm tracking-wide text-white/40">© 2024 MRP Tech. Hyper-Digital Ecosystem.</p>
+</div>
+<div class="col-span-3 flex flex-wrap gap-x-8 gap-y-4 justify-start md:justify-end items-center">
+<a class="font-['Space_Grotesk'] text-sm tracking-wide text-white/40 hover:text-[#6DFBCB] transition-colors ease-in-out duration-200" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-wide text-white/40 hover:text-[#6DFBCB] transition-colors ease-in-out duration-200" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-wide text-white/40 hover:text-[#6DFBCB] transition-colors ease-in-out duration-200" href="#">AI Ethics</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-wide text-white/40 hover:text-[#6DFBCB] transition-colors ease-in-out duration-200" href="#">Global Support</a>
+</div>
+</div>
+</footer>
+</body></html>
