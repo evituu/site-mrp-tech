@@ -44,3 +44,34 @@ section {
 .glow-pulse {
   animation: pulse-slow 4s ease-in-out infinite;
 }
+
+@keyframes progressFlow {
+  0% { width: 0%; opacity: 0.4; }
+  87.5% { width: 100%; opacity: 1; }
+  93.75% { width: 100%; opacity: 1; }
+  100% { width: 100%; opacity: 0; }
+}
+
+@keyframes progressFlowVertical {
+  0% { height: 0%; opacity: 0.4; }
+  87.5% { height: 100%; opacity: 1; }
+  93.75% { height: 100%; opacity: 1; }
+  100% { height: 100%; opacity: 0; }
+}
+
+@keyframes stepPulse {
+  0%, 4% { opacity: 1; }
+  10% { opacity: 0.5; }
+  16%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-progress,
+  .timeline-progress-v,
+  .step-pulse {
+    animation: none !important;
+  }
+  .timeline-progress { width: 100% !important; opacity: 1 !important; }
+  .timeline-progress-v { height: 100% !important; opacity: 1 !important; }
+  .step-pulse { opacity: 0 !important; }
+}

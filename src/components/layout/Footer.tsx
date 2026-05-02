@@ -60,16 +60,14 @@ export function Footer() {
           {/* Brand */}
           <div>
             <a href="#home" className="inline-flex items-center gap-3 group">
-              <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-sm bg-white/5 ring-1 ring-white/10">
-                <Image
-                  src="/Logo/LOGO_FUNDO_BRANCO.png"
-                  alt="MRP Tech"
-                  width={40}
-                  height={40}
-                  className="h-full w-full object-contain p-1"
-                  priority
-                />
-              </span>
+              <Image
+                src="/Logo/LOGO_FUNDO_BRANCO.png"
+                alt="MRP Tech"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+                priority
+              />
               <span className="text-white font-bold text-xl tracking-wider select-none">
                 <span className="text-white">MRP </span>
                 <span className="text-[#6A3F91]">Tech</span>

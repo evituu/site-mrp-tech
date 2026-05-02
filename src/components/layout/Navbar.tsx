@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../ui/Button";
 
@@ -21,9 +22,20 @@ export function Navbar() {
           {/* Logo */}
           <a
             href="#home"
-            className="text-white font-bold text-xl tracking-wider select-none"
+            className="inline-flex items-center gap-3 group select-none"
           >
-            MRP<span className="text-[#A719FA]">_</span>Tech
+            <Image
+              src="/Logo/LOGO_FUNDO_BRANCO.png"
+              alt="MRP Tech"
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain"
+              priority
+            />
+            <span className="text-white font-bold text-xl tracking-wider">
+              <span className="text-white">MRP </span>
+              <span className="text-[#6A3F91]">Tech</span>
+            </span>
           </a>
 
           {/* Desktop Nav */}

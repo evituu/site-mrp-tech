@@ -21,7 +21,8 @@ export function Sobre() {
 
             <h2 className="text-3xl sm:text-4xl font-bold text-white mt-4 mb-6 leading-tight">
               Revelamos a quarta dimensão{" "}
-              <span className="text-[#A719FA]">do seu negócio</span>
+              <span className="text-[#A719FA]">quarta dimensão </span>
+              do seu negócio.
             </h2>
 
             <div className="space-y-4 text-white/55 leading-relaxed text-base">
@@ -34,18 +35,10 @@ export function Sobre() {
               </p>
               <p>
                 Nosso símbolo é o{" "}
-                <strong className="text-[#6DFBCB]">Tesseract</strong> — o
-                hipercubo em quatro dimensões. Assim como ele representa uma
-                dimensão além da percepção comum, a MRP Tech revela ao
-                empresário o que está invisível na operação: dados, processos,
-                gargalos e oportunidades que não aparecem no dia a dia.
-              </p>
-              <p>
-                O empresário enxerga o negócio em{" "}
-                <strong className="text-white">3D</strong>: vendas, custos e
-                operação. A MRP Tech entrega a{" "}
-                <strong className="text-[#A719FA]">4ª dimensão</strong>: dados,
-                processos, inteligência e escala.
+                <strong className="text-[#6DFBCB]">Tesseract</strong>. Assim como 
+                ele representa uma dimensão além da percepção comum, a MRP Tech 
+                revela ao seu negócio o que está invisível na operação: 
+                dados, processos, gargalos e oportunidades que não aparecem no dia a dia.
               </p>
             </div>
 

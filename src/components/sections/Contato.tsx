@@ -27,7 +27,7 @@ export function Contato() {
   }
 
   const inputClass =
-    "w-full bg-white/4 border border-white/10 text-white placeholder:text-white/25 text-sm px-4 py-3 outline-none focus:border-[#A719FA]/60 focus:bg-white/6 transition-colors";
+    "w-full bg-[#F7F8FA] border border-black/10 text-[#101014] placeholder:text-black/30 text-sm px-4 py-3 outline-none focus:border-[#6A3F91]/50 focus:bg-white transition-colors";
 
   return (
     <section id="contato" className="py-24 bg-black relative overflow-hidden">
@@ -104,21 +104,21 @@ export function Contato() {
           </div>
 
           {/* Right: form */}
-          <div className="border border-white/8 bg-white/2 p-8">
+          <div className="bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
             {enviado ? (
               <div className="flex flex-col items-center justify-center h-64 text-center gap-4">
                 <div className="w-12 h-12 border border-[#6DFBCB]/40 flex items-center justify-center text-[#6DFBCB] text-2xl">
                   ✓
                 </div>
-                <p className="text-white font-semibold">
+                <p className="text-[#101014] font-semibold">
                   Mensagem enviada!
                 </p>
-                <p className="text-white/40 text-sm">
+                <p className="text-[#6B7280] text-sm">
                   Em breve entraremos em contato.
                 </p>
                 <button
                   onClick={() => { setEnviado(false); setForm({ nome: "", empresa: "", email: "", mensagem: "" }); }}
-                  className="text-xs text-[#A719FA] hover:underline mt-2"
+                  className="text-xs text-[#6A3F91] hover:underline mt-2"
                 >
                   Enviar outra mensagem
                 </button>
@@ -127,7 +127,7 @@ export function Contato() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs text-white/40 uppercase tracking-wider block mb-1.5">
+                    <label className="text-xs text-[#6B7280] uppercase tracking-wider block mb-1.5">
                       Nome
                     </label>
                     <input
@@ -140,7 +140,7 @@ export function Contato() {
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-white/40 uppercase tracking-wider block mb-1.5">
+                    <label className="text-xs text-[#6B7280] uppercase tracking-wider block mb-1.5">
                       Empresa
                     </label>
                     <input
@@ -154,7 +154,7 @@ export function Contato() {
                 </div>
 
                 <div>
-                  <label className="text-xs text-white/40 uppercase tracking-wider block mb-1.5">
+                  <label className="text-xs text-[#6B7280] uppercase tracking-wider block mb-1.5">
                     E-mail
                   </label>
                   <input
@@ -169,7 +169,7 @@ export function Contato() {
                 </div>
 
                 <div>
-                  <label className="text-xs text-white/40 uppercase tracking-wider block mb-1.5">
+                  <label className="text-xs text-[#6B7280] uppercase tracking-wider block mb-1.5">
                     Mensagem
                   </label>
                   <textarea

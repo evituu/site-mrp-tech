@@ -106,17 +106,25 @@ export function Valores() {
           {valores.map((v) => (
             <div
               key={v.title}
-              className="group p-6 border border-white/8 bg-white/2 hover:border-[#A719FA]/40 hover:bg-[#A719FA]/5 transition-all duration-300"
+              className="group relative overflow-hidden p-6 bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_40px_rgba(0,0,0,0.3)] hover:bg-white/8 hover:border-[#6DFBCB]/30 hover:shadow-[0_16px_60px_rgba(109,251,203,0.08)] hover:-translate-y-1.5 transition-all duration-500 will-change-transform"
             >
-              <div className="w-10 h-10 flex items-center justify-center text-[#6DFBCB] mb-4 border border-[#6DFBCB]/20 bg-[#6DFBCB]/5 group-hover:bg-[#6DFBCB]/10 transition-colors">
-                {v.icon}
+              {/* Glow interno no hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <div className="absolute -top-16 -right-16 w-40 h-40 bg-[#6DFBCB]/15 blur-3xl" />
+                <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-[#A719FA]/12 blur-3xl" />
               </div>
-              <h3 className="text-white font-semibold text-base mb-2">
-                {v.title}
-              </h3>
-              <p className="text-white/45 text-sm leading-relaxed">
-                {v.description}
-              </p>
+
+              <div className="relative z-10">
+                <div className="w-10 h-10 flex items-center justify-center text-[#6DFBCB] mb-4 border border-[#6DFBCB]/20 bg-[#6DFBCB]/5 group-hover:bg-[#6DFBCB]/10 transition-colors">
+                  {v.icon}
+                </div>
+                <h3 className="text-white font-semibold text-base mb-2">
+                  {v.title}
+                </h3>
+                <p className="text-white/45 text-sm leading-relaxed">
+                  {v.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
