@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const footerLinks = [
   { label: "Início", href: "#home" },
   { label: "Sobre", href: "#sobre" },
@@ -58,13 +60,19 @@ export function Footer() {
           {/* Brand */}
           <div>
             <a href="#home" className="inline-flex items-center gap-3 group">
-              <span className="relative flex h-8 w-8 items-center justify-center">
-                <span className="absolute inset-0 border border-[#6DFBCB]/40 rotate-45 transition-transform duration-300 group-hover:rotate-[60deg]" />
-                <span className="absolute inset-1 border border-[#A719FA]/40 rotate-12 transition-transform duration-300 group-hover:-rotate-12" />
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6DFBCB] shadow-[0_0_12px_rgba(109,251,203,0.8)]" />
+              <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-sm bg-white/5 ring-1 ring-white/10">
+                <Image
+                  src="/Logo/LOGO_FUNDO_BRANCO.png"
+                  alt="MRP Tech"
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-contain p-1"
+                  priority
+                />
               </span>
               <span className="text-white font-bold text-xl tracking-wider select-none">
-                MRP<span className="text-[#A719FA]">_</span>Tech
+                <span className="text-white">MRP </span>
+                <span className="text-[#6A3F91]">Tech</span>
               </span>
             </a>
 
@@ -73,11 +81,6 @@ export function Footer() {
               transforma dores reais em soluções escaláveis, revelando
               dimensões invisíveis do negócio.
             </p>
-
-            <div className="mt-6 inline-flex items-center gap-2 border border-white/10 bg-white/[0.02] px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-white/35">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#A719FA]" />
-              Quarta dimensão
-            </div>
           </div>
 
           {/* Navigation */}
